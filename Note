@@ -1,0 +1,136 @@
+#installation: https://lhapdf.hepforge.org/install.html
+Installed after downloading with the command (after extracting: $tar -xvzf lhapdf-v.r.tar.gz and going to the LHAPDF- folder:$cd lhapdf-v.r):
+
+Just ./configure or
+
+$./configure --prefix=/path/to/directory
+
+Then do: $./make and $./make install
+
+
+Environment setting:
+
+export PATH=$PATH:/foo/lhapdf/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/foo/lhapdf/lib
+export PYTHONPATH=$PYTHONPATH:/foo/lhapdf/lib/python3.9/site-packages
+
+
+
+
+LHAPDF Manual
+https://lhapdf.hepforge.org/lhapdf5/manual#tthFtNtAAB
+
+
+To compile:
+$g++ -o ncteq15_Pb ncteq15_Pb.cc -L$HOME/stricklandlab/LHAPDF/LHAPDF_install/lib -lLHAPDF -I$HOME/stricklandlab/LHAPDF/LHAPDF_install/local/include
+
+
+%%%%%%%
+https://lhapdf.hepforge.org/
+
+
+%%%%%%%%%%%%
+Nano
+%%%%%%%%%%%%
+Using Ctrl+O will save your changes to the file, Enter confirms the filename, and Ctrl+X exits nano.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+LHAPDF6 with Python
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+LHAPDF installation with python: 
+
+https://confluence.its.virginia.edu/pages/viewpage.action?pageId=46553452
+
+Installed using above reference in the directory:
+
+/home/stricklandlab/LHAPDF/LHAPDF6_install
+
+
+%%%%%%%%%%%%%%%%%%
+LHAPDF Important Note after installing there:
+%%%%%%%%%%%%%%%%%%
+
+IMPORTANT INFORMATION ABOUT PDF SETS
+
+LHAPDF no longer bundles PDF set data in the package tarball.
+The sets are instead all stored online at
+  http://lhapdfsets.web.cern.ch/lhapdfsets/current/
+and you should install those that you wish to use into
+  /home/stricklandlab/LHAPDF/LHAPDF_install/share/LHAPDF
+  
+ ************ (in the terminal do: $  export LD_LIBRARY_PATH=/home/stricklandlab/LHAPDF/LHAPDF_install/lib:$LD_LIBRARY_PATH).**************
+ 
+ ******compile: $g++ -O3 -I/home/stricklandlab/LHAPDF/LHAPDF_install/include -L/home/stricklandlab/LHAPDF/LHAPDF_install/lib epps21_pdf.cc -o epps21_pdf -lLHAPDF)********
+ 
+ 
+ ********for proton: $g++ -O3 -I/home/stricklandlab/LHAPDF/LHAPDF_install/include -L/home/stricklandlab/LHAPDF/LHAPDF_install/lib gluonpdf_proton.cc -o proton_gluonpdf -lLHAPDF ************
+ 
+ ****execute: $./output***********88
+
+The downloadable PDF sets are packaged as tarballs, which
+must be expanded to be used. The simplest way to do this is with
+the 'lhapdf' script, e.g. to install the CT10nlo PDF set:
+  lhapdf install CT10nlo
+  
+The same effect can be achieved manually with, e.g.:
+  wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/CT10nlo.tar.gz -O- | tar xz -C /home/stricklandlab/LHAPDF/LHAPDF_install/share/LHAPDF
+
+
+
+%%%%%%
+LHAPDFs downloaded and unpackaged in the: (only available in the website)
+http://lhapdfsets.web.cern.ch/lhapdfsets/current/
+%%%%%%
+(in the directory: /home/stricklandlab/LHAPDF/LHAPDF_install/share/LHAPDF
+%%%
+wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/CT10nlo.tar.gz -O- | tar xz -C /home/stricklandlab/LHAPDF/LHAPDF_install/share/LHAPDF
+
+
+%%%%%%%
+For EPPS21NLO
+%%%%%%%
+
+https://www.jyu.fi/science/en/physics/research/highenergy/urhic/npdfs/epps21-nuclear-pdfs
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+NOTE:https://confluence.its.virginia.edu/pages/viewpage.action?pageId=46553452
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+   4. Using LHAPDF
+
+All input and outputs are defined in DOUBLE PRECISION
+
+There are three options to make a single PDF dataset:
+
+PDF * lhapdf.mkPDF(int lhaid)
+
+Below is an example:
+
+“variable name” = lhapdf.mkPDF(“filename”)
+
+            Returns PDFs as vector<PDF*>
+
+PDF * lhapdf.mkPDF(const std.string &setname, int member)
+
+Ex: “variable name” = lhapdf.mkPDF(setname,imem)
+
+ 
+
+PDF * lhapdf.mkPDF(const str.string &setname_nmen)
+
+Where “variable name” is whatever name you want to give to the assigned variable.
+
+For making whole PDF sets:
+
+“variable name” = lhapdf.getPDFSet(‘filename’)
+
+            lhapdf.getPDFSet() will allow you to use the raw data from a dataset.
+
+                        à “Info” is a class of function. In this case, Info() is a default constructor.
+
+
+
+
+

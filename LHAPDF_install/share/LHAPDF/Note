@@ -1,0 +1,23 @@
+%%%%%%
+LHAPDFs downloaded and unpackaged in the: (only available in the website)
+http://lhapdfsets.web.cern.ch/lhapdfsets/current/
+%%%%%%
+(in the directory: /home/stricklandlab/LHAPDF/LHAPDF_install/share/LHAPDF
+%%%
+wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/CT10nlo.tar.gz -O- | tar xz -C /home/stricklandlab/LHAPDF/LHAPDF_install/share/LHAPDF
+
+
+
+%%%%%
+wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/EPPS21nlo_CT18Anlo_Pb208.tar.gz -O- | tar xz -C /home/stricklandlab/LHAPDF/LHAPDF_install/share/LHAPDF
+
+%%%%%proton pdf
+//download and unpack/unzip the pdf in the installation library  
+// my case: /home/stricklandlab/LHAPDF/LHAPDF_install/share/LHAPDF
+//terminal: $ wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/NNPDF23_lo_as_0119_qed.tar.gz
+// $ tar -xvzf NNPDF23_lo_as_0119_qed.tar.gz 
+
+
+
+
+$ export LD_LIBRARY_PATH=$LH_LIBRARY_PATH:/home/stricklandlab/LHAPDF/LHAPDF_install/lib
