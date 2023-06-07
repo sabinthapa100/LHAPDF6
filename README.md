@@ -1,4 +1,7 @@
-# LHAPDF6: for nPDF suppression calculation! 
+# LHAPDF6: for nPDF suppression (Gluon PDF Ratio) calculation! 
+
+- By [Sabin Thapa](https://www.kent.edu/physics/sabin-thapa) (sabinthapa240@gmail.com / sthapa3@kent.edu), [Prof. Michael Strickland](https://www.kent.edu/physics/profile/michael-strickland) (
+mstrick6@kent.edu), Department of Physics, Kent State University, Kent, OH, USA.
 
 (For my purpose, I use C++, but you should be able to do it in Python following the references provided)
 
@@ -14,14 +17,23 @@
 **LHAPDF5 Manual**
 https://lhapdf.hepforge.org/lhapdf5/manual#tthFtNtAAB
 
-#tutorials are done with tut.cc name (one example) located inside "examples" subfolder of the /LHAPDF6_sabin/LHAPDF-6-5-4
-#installation is done in the folder /LHAPDF6_sabin/LHAPDF_install.
+# Tutorials are done with tut.cc name (one example) located inside "examples" subfolder of the /LHAPDF/LHAPDF-6.5.4
 
-To compile:
+
+# Installation is done in the folder /LHAPDF/LHAPDF_install
+
+
+# The pdf sets are downloaded (from https://lhapdf.hepforge.org/pdfsets.html) in the LHAPDF/LHAPDF_install/share/LHAPDF folder (automatically formed folder after the installation).
+
+
+
+To compile: 
 $g++ -o ncteq15_Pb tut1.cc -L$HOME/stricklandlab/LHAPDF/LHAPDF_install/lib -lLHAPDF -I$HOME/stricklandlab/LHAPDF/LHAPDF_install/local/include
 
+(NOTE: For ease, go to the LHAPDF/LHAPDF-6.5.4/examples folder, and compile, otherwise you'd have to set the environment properly!)
+
+
 or
-make tut1 [but to make it errorless, we need to manually change makefile inside - need to work on it]
 
 %%%%%%%%%%%%
 Nano-editor:
