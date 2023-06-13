@@ -21,8 +21,8 @@ LHAPDF Manual
 https://lhapdf.hepforge.org/lhapdf5/manual#tthFtNtAAB
 
 
-To compile:
-$g++ -o ncteq15_Pb ncteq15_Pb.cc -L$HOME/stricklandlab/LHAPDF/LHAPDF_install/lib -lLHAPDF -I$HOME/stricklandlab/LHAPDF/LHAPDF_install/local/include
+To compile: (change your usename/dir location)
+$g++ -o ncteq15_Pb ncteq15_Pb.cc -L$HOME/username/LHAPDF/LHAPDF_install/lib -lLHAPDF -I$HOME/stricklandlab/LHAPDF/LHAPDF_install/local/include
 
 
 %%%%%%%
@@ -45,7 +45,7 @@ https://confluence.its.virginia.edu/pages/viewpage.action?pageId=46553452
 
 Installed using above reference in the directory:
 
-/home/stricklandlab/LHAPDF/LHAPDF6_install
+/home/username/LHAPDF/LHAPDF6_install
 
 
 %%%%%%%%%%%%%%%%%%
@@ -58,14 +58,14 @@ LHAPDF no longer bundles PDF set data in the package tarball.
 The sets are instead all stored online at
   http://lhapdfsets.web.cern.ch/lhapdfsets/current/
 and you should install those that you wish to use into
-  /home/stricklandlab/LHAPDF/LHAPDF_install/share/LHAPDF
+  /home/username/LHAPDF/LHAPDF_install/share/LHAPDF
   
  ************ (in the terminal do: $  export LD_LIBRARY_PATH=/home/stricklandlab/LHAPDF/LHAPDF_install/lib:$LD_LIBRARY_PATH).**************
  
- ******compile: $g++ -O3 -I/home/stricklandlab/LHAPDF/LHAPDF_install/include -L/home/stricklandlab/LHAPDF/LHAPDF_install/lib epps21_pdf.cc -o epps21_pdf -lLHAPDF)********
+ ******compile: $g++ -O3 -I/home/username/LHAPDF/LHAPDF_install/include -L/home/stricklandlab/LHAPDF/LHAPDF_install/lib epps21_pdf.cc -o epps21_pdf -lLHAPDF)********
  
  
- ********for proton: $g++ -O3 -I/home/stricklandlab/LHAPDF/LHAPDF_install/include -L/home/stricklandlab/LHAPDF/LHAPDF_install/lib gluonpdf_proton.cc -o proton_gluonpdf -lLHAPDF ************
+ ********for proton: $g++ -O3 -I/home/username/LHAPDF/LHAPDF_install/include -L/home/stricklandlab/LHAPDF/LHAPDF_install/lib gluonpdf_proton.cc -o proton_gluonpdf -lLHAPDF ************
  
  ****execute: $./output***********88
 
@@ -83,9 +83,9 @@ The same effect can be achieved manually with, e.g.:
 LHAPDFs downloaded and unpackaged in the: (only available in the website)
 http://lhapdfsets.web.cern.ch/lhapdfsets/current/
 %%%%%%
-(in the directory: /home/stricklandlab/LHAPDF/LHAPDF_install/share/LHAPDF
+(in the directory: /home/username/LHAPDF/LHAPDF_install/share/LHAPDF)
 %%%
-wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/CT10nlo.tar.gz -O- | tar xz -C /home/stricklandlab/LHAPDF/LHAPDF_install/share/LHAPDF
+wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/CT10nlo.tar.gz -O- | tar xz -C /home/username/LHAPDF/LHAPDF_install/share/LHAPDF
 
 
 %%%%%%%
