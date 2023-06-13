@@ -76,7 +76,10 @@ the 'lhapdf' script, e.g. to install the CT10nlo PDF set:
   
 The same effect can be achieved manually with, e.g.:
   wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/CT10nlo.tar.gz -O- | tar xz -C /home/username/LHAPDF/LHAPDF_install/share/LHAPDF
-
+  
+  
+ Also, to download EPPS21:
+wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/EPPS21nlo_CT18Anlo_Pb208.tar.gz -O- | tar xz -C /home/username/LHAPDF/LHAPDF_install/share/LHAPDF
 
 
 %%%%%%
