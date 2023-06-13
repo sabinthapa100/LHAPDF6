@@ -22,7 +22,7 @@ https://lhapdf.hepforge.org/lhapdf5/manual#tthFtNtAAB
 
 
 To compile: (change your usename/dir location)
-$g++ -o ncteq15_Pb ncteq15_Pb.cc -L$HOME/username/LHAPDF/LHAPDF_install/lib -lLHAPDF -I$HOME/stricklandlab/LHAPDF/LHAPDF_install/local/include
+$g++ -o ncteq15_Pb ncteq15_Pb.cc -L$HOME/username/LHAPDF/LHAPDF_install/lib -lLHAPDF -I$HOME/username/LHAPDF/LHAPDF_install/local/include
 
 
 %%%%%%%
@@ -60,12 +60,12 @@ The sets are instead all stored online at
 and you should install those that you wish to use into
   /home/username/LHAPDF/LHAPDF_install/share/LHAPDF
   
- ************ (in the terminal do: $  export LD_LIBRARY_PATH=/home/stricklandlab/LHAPDF/LHAPDF_install/lib:$LD_LIBRARY_PATH).**************
+ ************ (in the terminal do: $  export LD_LIBRARY_PATH=/home/username/LHAPDF/LHAPDF_install/lib:$LD_LIBRARY_PATH).**************
  
- ******compile: $g++ -O3 -I/home/username/LHAPDF/LHAPDF_install/include -L/home/stricklandlab/LHAPDF/LHAPDF_install/lib epps21_pdf.cc -o epps21_pdf -lLHAPDF)********
+ ******compile: $g++ -O3 -I/home/username/LHAPDF/LHAPDF_install/include -L/home/username/LHAPDF/LHAPDF_install/lib epps21_pdf.cc -o epps21_pdf -lLHAPDF)********
  
  
- ********for proton: $g++ -O3 -I/home/username/LHAPDF/LHAPDF_install/include -L/home/stricklandlab/LHAPDF/LHAPDF_install/lib gluonpdf_proton.cc -o proton_gluonpdf -lLHAPDF ************
+ ********for proton: $g++ -O3 -I/home/username/LHAPDF/LHAPDF_install/include -L/home/username/LHAPDF/LHAPDF_install/lib gluonpdf_proton.cc -o proton_gluonpdf -lLHAPDF ************
  
  ****execute: $./output***********88
 
@@ -75,7 +75,7 @@ the 'lhapdf' script, e.g. to install the CT10nlo PDF set:
   lhapdf install CT10nlo
   
 The same effect can be achieved manually with, e.g.:
-  wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/CT10nlo.tar.gz -O- | tar xz -C /home/stricklandlab/LHAPDF/LHAPDF_install/share/LHAPDF
+  wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/CT10nlo.tar.gz -O- | tar xz -C /home/username/LHAPDF/LHAPDF_install/share/LHAPDF
 
 
 
